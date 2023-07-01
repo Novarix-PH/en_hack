@@ -30,6 +30,9 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+  font_awesome_flutter: ^9.0.0
+  page_transition: ^2.0.5
+  carousel_slider: ^4.2.1
 
 flutter:
 
@@ -49,3 +52,5 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/images/carousel_images/
+    - assets/images/card_images/
