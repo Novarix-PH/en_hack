@@ -1,6 +1,7 @@
+import 'package:en_hack/screens/home/product/product_check_list_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../config/themes.dart';
+import '../../../config/themes.dart';
 
 class ProductScreen extends StatefulWidget {
   const ProductScreen({Key? key}) : super(key: key);
@@ -29,17 +30,6 @@ class _ProductScreenState extends State<ProductScreen> {
             fontSize: 18.0,
           ),
         ),
-        actions: [
-          /* IconButton(
-            icon: Icon(
-              Icons.notifications,
-              color: ColorConstant.primaryColor,
-              size: 30,
-            ),
-            tooltip: 'Open shopping cart',
-            onPressed: () {},
-          ),*/
-        ],
       ),
       body: SafeArea(
         child: Container(
@@ -54,7 +44,14 @@ class _ProductScreenState extends State<ProductScreen> {
                   title: 'Expand Product Range',
                   isLocked: false,
                   isMostRecommended: true,
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProductCheckListScreen(),
+                      ),
+                    );
+                  },
                 ),
                 _CardChoice(
                   title: 'Improve Product Presentation',

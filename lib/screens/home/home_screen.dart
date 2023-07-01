@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:en_hack/screens/home/product_screen.dart';
+import 'package:en_hack/screens/home/product/product_screen.dart';
 import 'package:en_hack/widgets/container_widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
@@ -137,18 +137,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
 
             const SizedBox(height: 10),
-
-            _CardGrowthTrack(
-              title: 'BRANDING',
-              imageUri: "assets/images/card_images/card_image_pic_1.png",
-              isMostRecommended: true,
-              listSubText: const ["Identity", "Brand Message", "Visual Design", "aesthetic"],
-              onTap: () {},
-            ),
             _CardGrowthTrack(
               title: 'PRODUCT',
               imageUri: "assets/images/card_images/card_image_pic_2.png",
               listSubText: const ["Enhancement", "Launching", "Brand Integration"],
+              isMostRecommended: true,
               onTap: () {
                 Navigator.push(
                   context,
@@ -158,6 +151,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),
+            _CardGrowthTrack(
+              title: 'BRANDING',
+              imageUri: "assets/images/card_images/card_image_pic_1.png",
+              listSubText: const ["Identity", "Brand Message", "Visual Design", "aesthetic"],
+              onTap: () {},
+            ),
+
             _CardGrowthTrack(
               title: 'MARKETING',
               imageUri: "assets/images/card_images/card_image_pic_3.png",
