@@ -8,6 +8,7 @@ class ColorConstant {
   static var color4 = const Color(0XFF20142B);
   static var color5 = const Color(0XFFB872FD);
   static var primaryColor = const Color(0xFF6DA8FC) ;
+  static var blueLight = const Color(0xFFC7DEFE);
 
   static var backGroundColor1 = Colors.black;
   static var textColor1 = Colors.white;
