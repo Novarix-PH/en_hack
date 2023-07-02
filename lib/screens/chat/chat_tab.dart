@@ -47,9 +47,9 @@ class _ChatTabState extends State<ChatTab> with TickerProviderStateMixin {
         Expanded(
           child: TabBarView(
             controller: _tabController,
-            children: [
-               const _ContainerAsk(),
-              Container(),
+            children: const [
+              _ContainerAsk(),
+              _ContainerHistory(),
             ],
           ),
         ),
@@ -82,7 +82,6 @@ class _ContainerAsk extends StatelessWidget {
                 leftRight: 2,
               ),
               SizedBox(height: 10),
-
             ],
           ),
           Container(
@@ -93,9 +92,12 @@ class _ContainerAsk extends StatelessWidget {
               children: [
                 const Align(
                   alignment: Alignment.centerLeft,
-                  child: Text("Ask a Questions", style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                  ),),
+                  child: Text(
+                    "Ask a Questions",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ),
                 Row(
                   children: [
@@ -146,6 +148,100 @@ class _CardChat extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
           child: Text(text),
         ),
+      ),
+    );
+  }
+}
+
+class _ContainerHistory extends StatelessWidget {
+  const _ContainerHistory({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: ColorConstant.blueLight,
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
+        child: Column(
+          children: [
+            Column(
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(left: 10.0, top: 10.0),
+                  child: const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text(
+                        "Today",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )),
+                ),
+                const _CardChatHistory(
+                  text: "How to make my business standout?",
+                ),
+                const _CardChatHistory(
+                  text: "Who are my competitors?",
+                ),
+                const _CardChatHistory(
+                  text: "What products should I buy?",
+                ),
+                const _CardChatHistory(
+                  text: "Recipe for a chocolate cupcake",
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 10.0, top: 10.0),
+                  child: const Align(
+                      alignment: Alignment.centerLeft,
+                      child: Text("Previous 7 Days", style: TextStyle(fontWeight: FontWeight.bold))),
+                ),
+                const _CardChatHistory(
+                  text: "Can I leave flour under the sun?",
+                ),
+                const _CardChatHistory(
+                  text: "How many employees should I hire?",
+                ),
+                const _CardChatHistory(
+                  text: "Am I ready for expansion?",
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _CardChatHistory extends StatelessWidget {
+  final String text;
+
+  const _CardChatHistory({Key? key, required this.text}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(5),
+      ),
+      padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
+      margin: const EdgeInsets.only(left: 10.0, right: 10.0, top: 10.0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              const SizedBox(width: 10),
+              Icon(
+                Icons.chat_bubble,
+                size: 20,
+                color: ColorConstant.primaryColor,
+              ),
+              const SizedBox(width: 10),
+              Expanded(child: Text(text)),
+            ],
+          ),
+          const SizedBox(height: 5),
+        ],
       ),
     );
   }
