@@ -136,7 +136,7 @@ class _HomeTabState extends State<HomeTab> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ProductScreen(),
+                    builder: (context) => const ProductScreen(),
                   ),
                 );
               },
@@ -248,8 +248,8 @@ class _CardGrowthTrack extends StatelessWidget {
                               child: Text(
                                 title,
                                 style: const TextStyle(
-                                  fontSize: 18.0,
-                                  fontWeight: FontWeight.bold,
+                                  fontSize: 17.0,
+                                  fontWeight: FontWeight.w900,
                                 ),
                               ),
                             ),
