@@ -38,6 +38,25 @@ class _HomeMainTabScreenState extends State<HomeMainTabScreen> {
         ),
       ),
       body: screens[selectedIndex],
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.transparent,
+        onPressed: () {},
+        child: Container(
+          width: 100,
+          height: 100,
+          decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            color: Colors.blue,
+          ),
+          child: IconButton(
+            icon: Icon(Icons.add, color: Colors.white),
+            onPressed: () {
+              // Add your onPressed functionality here
+            },
+          ),
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
         color: Colors.white,
         child: Glassmorphism(
@@ -67,6 +86,9 @@ class _HomeMainTabScreenState extends State<HomeMainTabScreen> {
                   iconData: bottomBarButtons[1],
                   index: 1,
                   currenSelectedIndex: selectedIndex,
+                ),
+                const SizedBox(
+                  width: kDefaultFatPadding,
                 ),
                 BottomBarButton(
                   onPress: () {
