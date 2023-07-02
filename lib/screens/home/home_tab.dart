@@ -91,10 +91,42 @@ class _HomeTabState extends State<HomeTab> {
               ],
             ),
             //endregion
-
+            const SizedBox(height: 15),
+            Container(
+              decoration: BoxDecoration(
+                color: ColorConstant.blueLight,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              padding: const EdgeInsets.symmetric(horizontal: 10.0,vertical: 10.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Row(
+                        children: const [
+                          Text("Offer Product Customization"),
+                          SizedBox(width: 5),
+                          Icon(Icons.info, size: 15)
+                        ],
+                      ),
+                      Icon(Icons.keyboard_arrow_right, size: 20, color: ColorConstant.primaryColor,)
+                    ],
+                  ),
+                  const SizedBox(height: 5),
+                  LinearProgressIndicator(
+                    value: 0.5,
+                    minHeight: 10,
+                    backgroundColor: Colors.blue[200],
+                    valueColor: const AlwaysStoppedAnimation<Color>(Colors.blue),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 15),
             //region Carousel
             SizedBox(
-              height: 200.0,
+              height: 150.0,
               child: CarouselSlider(
                 items: _listImages,
                 options: CarouselOptions(
@@ -159,27 +191,23 @@ class _HomeTabState extends State<HomeTab> {
               imageUri: "assets/images/card_images/card_image_pic_4.png",
               onTap: () {},
             ),
-            //
             _CardGrowthTrack(
               title: 'OPERATIONS',
               imageUri: "assets/images/card_images/card_image_pic_4.png",
               onTap: () {},
             ),
-
             _CardGrowthTrack(
               title: 'FINANCE',
               imageUri: "assets/images/card_images/card_image_pic_5.png",
               isLocked: true,
               onTap: () {},
             ),
-
             _CardGrowthTrack(
               title: 'OPERATIONS',
               imageUri: "assets/images/card_images/card_image_pic_6.jpg",
               isLocked: true,
               onTap: () {},
             ),
-
             _CardGrowthTrack(
               title: 'DATA ANALYTICS',
               imageUri: "assets/images/card_images/card_image_pic_7.png",

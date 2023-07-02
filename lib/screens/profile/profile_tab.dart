@@ -112,10 +112,10 @@ class _ProfileTabState extends State<ProfileTab> {
                 ),
                 const SizedBox(height: 5),
                 LinearProgressIndicator(
-                  value: 0.5, // The current progress value (between 0.0 and 1.0)
-                  minHeight: 10, // The minimum height of the progress bar
-                  backgroundColor: Colors.grey[300], // The background color of the progress bar
-                  valueColor: const AlwaysStoppedAnimation<Color>(Colors.blue), // The color of the progress bar
+                  value: 0.5,
+                  minHeight: 10,
+                  backgroundColor: Colors.grey[300],
+                  valueColor: const AlwaysStoppedAnimation<Color>(Colors.blue),
                 ),
               ],
             ),
