@@ -2,7 +2,8 @@
 
 EnHack Hackathon
 
-## Getting Started
+## EnBiz Mobile app
+## Team  Novarix
 
 Instructions:<br />
 1.) Download EnBiz mobile app from this link:<br />
