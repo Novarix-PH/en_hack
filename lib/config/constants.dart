@@ -1,13 +1,14 @@
 import 'package:en_hack/screens/business_association/association_tab.dart';
 import 'package:en_hack/screens/chat/chat_tab.dart';
 import 'package:en_hack/screens/home/home_tab.dart';
+import 'package:en_hack/screens/profile/profile_tab.dart';
 import 'package:flutter/material.dart';
 
 const screens = [
   HomeTab(),
   ChatTab(),
   BusinessAssociationTab(),
-  _TemporaryScreen(),
+  ProfileTab(),
 ];
 
 const double kWidthSideMenu = 100.0;
