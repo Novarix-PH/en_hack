@@ -12,14 +12,15 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  font_awesome_flutter: ^9.0.0
+  page_transition: ^2.0.5
+  carousel_slider: ^4.2.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
-  font_awesome_flutter: ^9.0.0
-  page_transition: ^2.0.5
-  carousel_slider: ^4.2.1
+
 
 flutter:
 
@@ -42,3 +43,5 @@ flutter:
     - assets/images/carousel_images/
     - assets/images/card_images/
     - assets/images/business_association/
+    - assets/images/guild/
+    - assets/images/profile/

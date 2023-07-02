@@ -20,7 +20,7 @@ class _ProductCheckListScreenState extends State<ProductCheckListScreen> {
             color: Colors.black,
           ),
           onPressed: () {
-            Navigator.pop(context); // Navigate back when the back arrow is pressed
+            Navigator.pop(context);
           },
         ),
         backgroundColor: Colors.white,

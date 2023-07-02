@@ -1,4 +1,5 @@
 import 'package:en_hack/config/themes.dart';
+import 'package:en_hack/screens/business_association/guild/guild_screen.dart';
 import 'package:flutter/material.dart';
 
 class BusinessAssociationTab extends StatefulWidget {
@@ -24,7 +25,12 @@ class _BusinessAssociationTabState extends State<BusinessAssociationTab> {
               imagePath: "assets/images/business_association/bus_assoc_pic_1.png",
               location: "Visayas",
               funcViewDetail: () {
-                // Navigator.pushNamed(context, ViewDetailElevateScreen.routeName);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const GuildScreen(),
+                  ),
+                );
               },
             ),
             _CardBusinessAssociation(
@@ -34,7 +40,6 @@ class _BusinessAssociationTabState extends State<BusinessAssociationTab> {
               imagePath: "assets/images/business_association/bus_assoc_pic_2.png",
               location: "Metro Manila",
               funcViewDetail: () {
-                // Navigator.pushNamed(context, ViewDetailElevateScreen.routeName);
               },
             ),
             const SizedBox(height: 20.0),
@@ -123,7 +128,7 @@ class _CardBusinessAssociation extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       TextButton(
-                        onPressed: () => funcViewDetail!(),
+                        onPressed: () {},
                         child: Text(
                           "View Details",
                           style: TextStyle(
@@ -147,7 +152,7 @@ class _CardBusinessAssociation extends StatelessWidget {
                             color: Colors.white,
                           ),
                         ),
-                        onPressed: () {},
+                        onPressed: () => funcViewDetail!(),
                       )
                     ],
                   )
