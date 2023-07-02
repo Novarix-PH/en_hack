@@ -90,11 +90,11 @@ class _CardBusinessAssociation extends StatelessWidget {
                       color: ColorConstant.primaryColor,
                     ),
                   ),
-                  const SizedBox(height: 3.0),
+                 /* const SizedBox(height: 3.0),
                   Text(
                     organization,
                     style: const TextStyle(fontSize: 16.0),
-                  ),
+                  ),*/
                   const SizedBox(height: 5.0),
                   Row(
                     children: [
