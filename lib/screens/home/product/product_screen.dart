@@ -16,13 +16,13 @@ class _ProductScreenState extends State<ProductScreen> {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black,),
+          icon: const Icon(Icons.arrow_back, color: Colors.black,),
           onPressed: () {
             Navigator.pop(context); // Navigate back when the back arrow is pressed
           },
         ),
         backgroundColor: Colors.white,
-        title: Text(
+        title: const Text(
           "Product",
           style: TextStyle(
             color: Colors.black,
@@ -33,13 +33,13 @@ class _ProductScreenState extends State<ProductScreen> {
       ),
       body: SafeArea(
         child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 20.0),
+          padding: const EdgeInsets.symmetric(horizontal: 20.0),
           child: SingleChildScrollView(
             physics: const BouncingScrollPhysics(parent: AlwaysScrollableScrollPhysics()),
             child: Column(
               children: [
 
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 _CardChoice(
                   title: 'Expand Product Range',
                   isLocked: false,
@@ -48,7 +48,7 @@ class _ProductScreenState extends State<ProductScreen> {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => ProductCheckListScreen(),
+                        builder: (context) => const ProductCheckListScreen(),
                       ),
                     );
                   },
@@ -90,18 +90,18 @@ class _ProductScreenState extends State<ProductScreen> {
                   onTap: () {},
                 ),
 
-                SizedBox(height: 10),
-                Align(
+                const SizedBox(height: 10),
+                const Align(
                   alignment: Alignment.centerLeft,
                     child: Text("Create your own Product Growth Track", style: TextStyle(fontWeight: FontWeight.bold),)),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Container(
                   height: 100.0,
                   decoration: BoxDecoration(
                     color: ColorConstant.blueLight,
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  child: Center(
+                  child: const Center(
                     child: Icon(Icons.add),
                   ),
                 )
@@ -177,7 +177,9 @@ class _CardChoice extends StatelessWidget {
                                   ),
                                 ),
                               ),
-                            )
+
+                            ),
+
                           ],
                         ),
                       ),

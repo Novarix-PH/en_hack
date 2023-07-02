@@ -25,7 +25,7 @@ class _ProductCheckListScreenState extends State<ProductCheckListScreen> {
         ),
         backgroundColor: Colors.white,
         title: const Text(
-          "Product: Check List",
+          "Check List",
           style: TextStyle(
             color: Colors.black,
             fontWeight: FontWeight.bold,

@@ -1,12 +1,11 @@
-import 'package:en_hack/screens/home/home_screen.dart';
+import 'package:en_hack/screens/business_association/association_tab.dart';
+import 'package:en_hack/screens/home/home_tab.dart';
 import 'package:flutter/material.dart';
 
 const screens = [
-  //CategoryListScreen(),
-  HomeScreen(),
-  //StatsScreen(),
+  HomeTab(),
   _TemporaryScreen(),
-  _TemporaryScreen(),
+  BusinessAssociationTab(),
   _TemporaryScreen(),
 ];
 
@@ -23,9 +22,8 @@ const double kDefaultFatPadding = 40.0;
 
 const bottomBarButtons = [
   Icons.home_outlined,
-  Icons.people,
-  Icons.stacked_bar_chart_outlined,
-  Icons.outlined_flag_outlined,
+  Icons.chat,
+  Icons.business,
   Icons.person,
 ];
 

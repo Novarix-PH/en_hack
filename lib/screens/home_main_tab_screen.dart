@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../config/constants.dart';
 import '../config/themes.dart';
 import '../widgets/bottom_bar_button.dart';
@@ -15,7 +14,6 @@ class HomeMainTabScreen extends StatefulWidget {
 class _HomeMainTabScreenState extends State<HomeMainTabScreen> {
   int selectedIndex = 0;
 
-  // handle onPress Bottom Bar Button
   void onChangeSelectedIndex(int index) {
     setState(() {
       selectedIndex = index;
@@ -28,27 +26,16 @@ class _HomeMainTabScreenState extends State<HomeMainTabScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        //elevation: 0.0,
+
         centerTitle: true,
         title: Text(
           "En-Biz",
           style: TextStyle(
             color: ColorConstant.primaryColor,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w900,
             fontSize: 18.0,
           ),
         ),
-        actions: [
-         /* IconButton(
-            icon: Icon(
-              Icons.notifications,
-              color: ColorConstant.primaryColor,
-              size: 30,
-            ),
-            tooltip: 'Open shopping cart',
-            onPressed: () {},
-          ),*/
-        ],
       ),
       body: screens[selectedIndex],
       bottomNavigationBar: BottomAppBar(
@@ -95,14 +82,6 @@ class _HomeMainTabScreenState extends State<HomeMainTabScreen> {
                   },
                   iconData: bottomBarButtons[3],
                   index: 3,
-                  currenSelectedIndex: selectedIndex,
-                ),
-                BottomBarButton(
-                  onPress: () {
-                    onChangeSelectedIndex(4);
-                  },
-                  iconData: bottomBarButtons[4],
-                  index: 4,
                   currenSelectedIndex: selectedIndex,
                 ),
                 const SizedBox(

@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:en_hack/screens/home/product/product_screen.dart';
 import 'package:en_hack/widgets/container_widgets.dart';
 import 'package:flutter/material.dart';
@@ -7,24 +6,18 @@ import 'package:carousel_slider/carousel_slider.dart';
 
 import '../../config/themes.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class HomeTab extends StatefulWidget {
+  const HomeTab({Key? key}) : super(key: key);
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<HomeTab> createState() => _HomeTabState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeTabState extends State<HomeTab> {
   final List<Widget> _listImages = [
-    const _ContainerImage(
-      imageUrl: "assets/images/carousel_images/carousel_images_1.png",
-    ),
-    const _ContainerImage(
-      imageUrl: "assets/images/carousel_images/carousel_images_2.png",
-    ),
-    const _ContainerImage(
-      imageUrl: "assets/images/carousel_images/carousel_images_3.png",
-    ),
+    const _ContainerImage(imageUrl: "assets/images/carousel_images/carousel_images_1.png"),
+    const _ContainerImage(imageUrl: "assets/images/carousel_images/carousel_images_2.png"),
+    const _ContainerImage(imageUrl: "assets/images/carousel_images/carousel_images_3.png"),
   ];
 
   @override
@@ -52,7 +45,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           backgroundImage: AssetImage('assets/images/cake_logo_pic_1.png'),
                         ),
                       ),
-                      // const SizedBox(width: 10.0),
                       Expanded(
                         flex: 8,
                         child: Column(
@@ -74,8 +66,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: const [
                                 ContainerText(text: "Fashion"),
                                 ContainerText(text: "Cakes"),
-                                ContainerText(text: "Pastries"),
-                                ContainerText(text: "Sweets"),
                                 ContainerText(text: "Pastries"),
                               ],
                             ),
@@ -178,7 +168,21 @@ class _HomeScreenState extends State<HomeScreen> {
 
             _CardGrowthTrack(
               title: 'FINANCE',
-              imageUri: "assets/images/card_images/card_image_pic_4.png",
+              imageUri: "assets/images/card_images/card_image_pic_5.png",
+              isLocked: true,
+              onTap: () {},
+            ),
+
+            _CardGrowthTrack(
+              title: 'OPERATIONS',
+              imageUri: "assets/images/card_images/card_image_pic_6.jpg",
+              isLocked: true,
+              onTap: () {},
+            ),
+
+            _CardGrowthTrack(
+              title: 'DATA ANALYTICS',
+              imageUri: "assets/images/card_images/card_image_pic_7.png",
               isLocked: true,
               onTap: () {},
             ),
@@ -260,6 +264,24 @@ class _CardGrowthTrack extends StatelessWidget {
                                 padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
                                 child: const Text(
                                   "MOST RECOMMENDED",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontSize: 8,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            ),
+                            Visibility(
+                              visible: isLocked ?? false,
+                              child: Container(
+                                decoration: BoxDecoration(
+                                  color: Colors.black,
+                                  borderRadius: BorderRadius.circular(5),
+                                ),
+                                padding: const EdgeInsets.symmetric(horizontal: 5.0, vertical: 5.0),
+                                child: const Text(
+                                  "UNLOCK TO USE",
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 8,
