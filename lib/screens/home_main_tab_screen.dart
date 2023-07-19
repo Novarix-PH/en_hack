@@ -44,12 +44,12 @@ class _HomeMainTabScreenState extends State<HomeMainTabScreen> {
         child: Container(
           width: 100,
           height: 100,
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
             shape: BoxShape.circle,
             color: Colors.blue,
           ),
           child: IconButton(
-            icon: Icon(Icons.add, color: Colors.white),
+            icon: const Icon(Icons.add, color: Colors.white),
             onPressed: () {
               // Add your onPressed functionality here
             },
