@@ -2,16 +2,12 @@
 
 EnHack Hackathon
 
-## Getting Started
+## EnBiz Mobile app
+## Team  Novarix
 
-This project is a starting point for a Flutter application.
+Instructions:<br />
+1.) Download EnBiz mobile app apk from this link:<br />
+https://drive.google.com/file/d/1ikMCC2JwDOqcVX1EEK0qzjHGeRj0xA7G/view?usp=drive_link<br />
+2.) Install it to your android device. :)<br />
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# en_hack" 
